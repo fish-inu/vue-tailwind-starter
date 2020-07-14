@@ -1,7 +1,8 @@
 module.exports = {
   purge: {
+    mode: "all",
     enabled: false,
-    content: ["./dist/main.js"],
+    content: ["./src/index.js"],
   },
   // ...
 };
