@@ -14,19 +14,6 @@ module.exports = {
           options: { presets: ["@babel/preset-env"] },
         },
       },
-      {
-        test: /\.css$/,
-        use: [
-          "style-loader",
-          "css-loader",
-          {
-            loader: "postcss-loader",
-            options: {
-              plugins: [require("tailwindcss"), require("autoprefixer")],
-            },
-          },
-        ],
-      },
     ],
   },
 };

@@ -6,4 +6,21 @@ module.exports = merge.merge(common, {
   devServer: {
     contentBase: "./dist",
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              plugins: [require("tailwindcss"), require("autoprefixer")],
+            },
+          },
+        ],
+      },
+    ],
+  },
 });
